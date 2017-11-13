@@ -58,27 +58,7 @@ public class FilterVsPredicateExample {
                         BasicTypeInfo.FLOAT_TYPE_INFO,
                         BasicTypeInfo.FLOAT_TYPE_INFO
                 )
-        ).output(new OutputFormat<Tuple>() {
-            @Override
-            public void configure(Configuration parameters) {
-
-            }
-
-            @Override
-            public void open(int taskNumber, int numTasks) throws IOException {
-
-            }
-
-            @Override
-            public void writeRecord(Tuple record) throws IOException {
-
-            }
-
-            @Override
-            public void close() throws IOException {
-
-            }
-        });
+        ).output(new PrintingOutputFormat<Tuple>());
 
 
         JobExecutionResult result1 = env.execute("PredicateJob");
@@ -101,27 +81,7 @@ public class FilterVsPredicateExample {
                         BasicTypeInfo.FLOAT_TYPE_INFO
                 )
         )
-        .output(new OutputFormat<Tuple>() {
-            @Override
-            public void configure(Configuration parameters) {
-
-            }
-
-            @Override
-            public void open(int taskNumber, int numTasks) throws IOException {
-
-            }
-
-            @Override
-            public void writeRecord(Tuple record) throws IOException {
-
-            }
-
-            @Override
-            public void close() throws IOException {
-
-            }
-        });
+                .output(new PrintingOutputFormat<Tuple>());
 
         JobExecutionResult result2 = env2.execute("FilteringJob");
 

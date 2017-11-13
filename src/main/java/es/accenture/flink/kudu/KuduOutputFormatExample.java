@@ -30,7 +30,7 @@ import java.util.Date;
 
 import static org.apache.flink.connectors.kudu.KuduOutputFormat.Conf.WriteMode.UPSERT;
 
-public class KuduOutputFormatTest {
+public class KuduOutputFormatExample {
 
     public static void main(String[] args) throws Exception {
         KuduInputFormat.Conf inputConfig = KuduInputFormat.Conf
